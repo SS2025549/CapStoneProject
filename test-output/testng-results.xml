@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="8" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-10T15:35:36 IST" name="Default suite" finished-at="2025-08-10T15:36:57 IST" duration-ms="80617">
+    <groups>
+    </groups>
+    <test started-at="2025-08-10T15:35:36 IST" name="Default test" finished-at="2025-08-10T15:36:57 IST" duration-ms="80617">
+      <class name="TelecomProject.TelecomTest">
+        <test-method signature="AddNewUser()[pri:1, instance:TelecomProject.TelecomTest@34123d65]" started-at="2025-08-10T15:35:36 IST" name="AddNewUser" finished-at="2025-08-10T15:35:40 IST" duration-ms="3819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewUser -->
+        <test-method signature="getUserProfile()[pri:2, instance:TelecomProject.TelecomTest@34123d65]" started-at="2025-08-10T15:35:40 IST" name="getUserProfile" finished-at="2025-08-10T15:35:42 IST" depends-on-methods="TelecomProject.TelecomTest.AddNewUser" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserProfile -->
+        <test-method signature="updateUser()[pri:2, instance:TelecomProject.TelecomTest@34123d65]" started-at="2025-08-10T15:35:42 IST" name="updateUser" finished-at="2025-08-10T15:35:44 IST" depends-on-methods="TelecomProject.TelecomTest.AddNewUser" duration-ms="1946" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUser -->
+        <test-method signature="loginUser()[pri:2, instance:TelecomProject.TelecomTest@34123d65]" started-at="2025-08-10T15:35:44 IST" name="loginUser" finished-at="2025-08-10T15:35:46 IST" depends-on-methods="TelecomProject.TelecomTest.updateUser" duration-ms="1757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUser -->
+        <test-method signature="addContact()[pri:2, instance:TelecomProject.TelecomTest@34123d65]" started-at="2025-08-10T15:35:46 IST" name="addContact" finished-at="2025-08-10T15:35:48 IST" depends-on-methods="TelecomProject.TelecomTest.loginUser" duration-ms="1719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addContact -->
+        <test-method signature="getContact()[pri:2, instance:TelecomProject.TelecomTest@34123d65]" started-at="2025-08-10T15:35:48 IST" name="getContact" finished-at="2025-08-10T15:35:49 IST" depends-on-methods="TelecomProject.TelecomTest.loginUser" duration-ms="1738" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getContact -->
+        <test-method signature="getContactList()[pri:2, instance:TelecomProject.TelecomTest@34123d65]" started-at="2025-08-10T15:35:49 IST" name="getContactList" finished-at="2025-08-10T15:35:51 IST" depends-on-methods="TelecomProject.TelecomTest.loginUser" duration-ms="1942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getContactList -->
+        <test-method signature="logoutUser()[pri:2, instance:TelecomProject.TelecomTest@34123d65]" started-at="2025-08-10T15:35:51 IST" name="logoutUser" finished-at="2025-08-10T15:35:53 IST" depends-on-methods="TelecomProject.TelecomTest.loginUser" duration-ms="1736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutUser -->
+        <test-method signature="updateContact()[pri:2, instance:TelecomProject.TelecomTest@34123d65]" started-at="2025-08-10T15:35:53 IST" name="updateContact" finished-at="2025-08-10T15:36:25 IST" depends-on-methods="TelecomProject.TelecomTest.loginUser" duration-ms="31849" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [503]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [503]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at TelecomProject.TelecomTest.updateContact(TelecomTest.java:151)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateContact -->
+        <test-method signature="updateContacts()[pri:2, instance:TelecomProject.TelecomTest@34123d65]" started-at="2025-08-10T15:36:25 IST" name="updateContacts" finished-at="2025-08-10T15:36:57 IST" depends-on-methods="TelecomProject.TelecomTest.loginUser" duration-ms="32033" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [503]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [503]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at TelecomProject.TelecomTest.updateContacts(TelecomTest.java:134)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateContacts -->
+      </class> <!-- TelecomProject.TelecomTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
