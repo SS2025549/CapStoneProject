@@ -1,0 +1,6 @@
+pages\CheckoutPage.class
+utils\ExtentReport.class
+utils\ConfigReader.class
+utils\WebDriverFactory.class
+pages\LoginPage.class
+pages\CartPage.class

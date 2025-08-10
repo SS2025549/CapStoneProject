@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="2" failed="1" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-10T12:17:02 IST" name="Default suite" finished-at="2025-08-10T12:17:25 IST" duration-ms="23297">
+    <groups>
+    </groups>
+    <test started-at="2025-08-10T12:17:02 IST" name="Default test" finished-at="2025-08-10T12:17:25 IST" duration-ms="23297">
+      <class name="tests.AddToCartTest">
+        <test-method is-config="true" signature="initialSetup()[pri:0, instance:tests.AddToCartTest@6f03482]" started-at="2025-08-10T12:17:02 IST" name="initialSetup" finished-at="2025-08-10T12:17:03 IST" duration-ms="1285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialSetup -->
+        <test-method signature="AppLogin()[pri:1, instance:tests.AddToCartTest@6f03482]" started-at="2025-08-10T12:17:03 IST" name="AppLogin" finished-at="2025-08-10T12:17:16 IST" duration-ms="12072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppLogin -->
+        <test-method signature="AddSingleItem_ToCart()[pri:2, instance:tests.AddToCartTest@6f03482]" started-at="2025-08-10T12:17:16 IST" name="AddSingleItem_ToCart" finished-at="2025-08-10T12:17:16 IST" depends-on-methods="tests.AddToCartTest.AppLogin" duration-ms="861" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddSingleItem_ToCart -->
+        <test-method signature="MultipleItems_ToCart()[pri:2, instance:tests.AddToCartTest@6f03482]" started-at="2025-08-10T12:17:16 IST" name="MultipleItems_ToCart" finished-at="2025-08-10T12:17:25 IST" depends-on-methods="tests.AddToCartTest.AppLogin" duration-ms="8331" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected to Add 1 item to cart expected [3] but found [2]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected to Add 1 item to cart expected [3] but found [2]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at tests.AddToCartTest.MultipleItems_ToCart(AddToCartTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MultipleItems_ToCart -->
+        <test-method signature="RemovefromCart()[pri:2, instance:tests.AddToCartTest@6f03482]" started-at="2025-08-10T12:17:25 IST" name="RemovefromCart" finished-at="2025-08-10T12:17:25 IST" depends-on-methods="tests.AddToCartTest.AppLogin, tests.AddToCartTest.MultipleItems_ToCart" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.AddToCartTest.RemovefromCart() on instance tests.AddToCartTest@6f03482 depends on not successfully finished methods 
+[tests.AddToCartTest.AppLogin() on instance tests.AddToCartTest@6f03482
+tests.AddToCartTest.MultipleItems_ToCart() on instance tests.AddToCartTest@6f03482]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.AddToCartTest.RemovefromCart() on instance tests.AddToCartTest@6f03482 depends on not successfully finished methods 
+[tests.AddToCartTest.AppLogin() on instance tests.AddToCartTest@6f03482
+tests.AddToCartTest.MultipleItems_ToCart() on instance tests.AddToCartTest@6f03482]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RemovefromCart -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.AddToCartTest@6f03482]" started-at="2025-08-10T12:17:25 IST" name="closeApp" finished-at="2025-08-10T12:17:25 IST" duration-ms="693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- tests.AddToCartTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

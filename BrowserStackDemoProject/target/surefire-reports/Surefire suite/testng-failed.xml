@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="tests.AddToCartTest">
+        <methods>
+          <include name="RemovefromCart"/>
+          <include name="AppLogin"/>
+          <include name="initialSetup"/>
+          <include name="MultipleItems_ToCart"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- tests.AddToCartTest -->
+      <class name="tests.CheckoutTest">
+        <methods>
+          <include name="place_order"/>
+          <include name="checkout_withoutItems"/>
+          <include name="initialSetup"/>
+          <include name="CheckoutOrder"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- tests.CheckoutTest -->
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="initialSetup"/>
+          <include name="loginApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
